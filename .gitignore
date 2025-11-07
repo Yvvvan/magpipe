@@ -6,4 +6,4 @@ data
 .env
 .idea
 .vscode
-adminer/
+adminer

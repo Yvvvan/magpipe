@@ -45,8 +45,8 @@ php -S 0.0.0.0:8080
 # use the following credentials:
 # System: PostgreSQL
 # Server: localhost
-# Username: maguserydo
-# Password: magpassydo
+# Username: maguser■■■
+# Password: magpass■■■
 # Database: magdb
 ```
 visualize the database with grafana (optional):
@@ -113,13 +113,13 @@ The username, password, database name, host, and port can be customized as neede
 sudo -u postgres psql # open psql shell
 ```
 ```sql
-CREATE USER maguserydo WITH PASSWORD 'magpassydo';
-CREATE DATABASE magdb OWNER maguserydo;
-GRANT ALL PRIVILEGES ON DATABASE magdb TO maguserydo;
+CREATE USER maguser■■■ WITH PASSWORD 'magpass■■■';
+CREATE DATABASE magdb OWNER maguser■■■;
+GRANT ALL PRIVILEGES ON DATABASE magdb TO maguser■■■;
 \q
 ```
 ``` bash
-# Connection URL: `postgresql://maguserydo:magpassydo@localhost:5432/magdb`
+# Connection URL: `postgresql://maguser■■■:magpass■■■@localhost:5432/magdb`
 ```
 And also make a '.env' file in the root directory to store these configurations. This file will be used by the backend service to connect to the database.
 ```yml
@@ -128,12 +128,12 @@ API_KEY=dev-secret
 APP_PORT=8000
 
 # db config
-POSTGRES_USER=maguserydo
-POSTGRES_PASSWORD=magpassydo
+POSTGRES_USER=maguser■■■
+POSTGRES_PASSWORD=magpass■■■
 POSTGRES_DB=magdb
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
-DATABASE_URL=postgresql://maguserydo:magpassydo@localhost:5432/magdb
+DATABASE_URL=postgresql://maguser■■■:magpass■■■@localhost:5432/magdb
 ```
 #### Step 3 Initialize Database Schema
 
@@ -141,11 +141,11 @@ Use `util/init.sql` to initialize the database schema. The database schema inclu
 
 Run the initialization script:
 ```bash
-psql -U maguserydo -h localhost -d magdb -f util/init.sql
+psql -U maguser■■■ -h localhost -d magdb -f util/init.sql
 ```
 Verify the table creation:
 ```bash
-psql -U maguserydo -h localhost -d magdb
+psql -U maguser■■■ -h localhost -d magdb
 \dt
 ```
 
@@ -229,7 +229,7 @@ if successful, you should see response:
 
 #### Option 1: Use psql Command Line
 ```bash
-psql -U maguserydo -h localhost -d magdb
+psql -U maguser■■■ -h localhost -d magdb
 ```
 ```sql
 SELECT * FROM magnetic_readings ORDER BY id DESC LIMIT 5;
